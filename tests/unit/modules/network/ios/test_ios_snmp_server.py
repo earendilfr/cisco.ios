@@ -1083,6 +1083,7 @@ class TestIosSnmpServerModule(TestIosModule):
             snmp-server inform pending 2
             snmp-server view no-write.test testiso excluded
             snmp-server view test-view! test-test included
+            snmp ifmib ifindex persist
             """,
         )
 
@@ -1335,7 +1336,6 @@ class TestIosSnmpServerModule(TestIosModule):
             "snmp-server view newView TestFamilyName included",
             "no snmp-server enable traps vtp",
             "no snmp-server view test-view! test-test included",
-            "snmp ifmib ifindex persist",
         ]
         playbook["state"] = "overridden"
         set_module_args(playbook)
