@@ -86,6 +86,9 @@ class L3_interfacesArgs(object):  # pylint: disable=R0903
                         },
                     },
                 },
+                "vrf": {
+                    "type": "str",
+                },
             },
         },
         "running_config": {"type": "str"},

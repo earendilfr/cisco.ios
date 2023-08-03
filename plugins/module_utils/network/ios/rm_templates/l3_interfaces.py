@@ -227,5 +227,19 @@ class L3_interfacesTemplate(NetworkTemplate):
                 },
             },
         },
+        {
+            "name": "vrf",
+            "getval": re.compile(
+                r"""
+                ^\s+vrf\sforwarding\s((?P<vrf>\S+))
+                """, re.VERBOSE,
+            ),
+            "setval": "vrf forwarding {{ vrf }}",
+            "result": {
+                "{{ name }}": {
+                    "vrf": "{{ vrf }}",
+                },
+            },
+        },
     ]
     # fmt: on

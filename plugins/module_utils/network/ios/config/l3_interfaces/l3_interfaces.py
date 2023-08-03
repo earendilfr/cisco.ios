@@ -54,6 +54,7 @@ class L3_interfaces(ResourceModule):
             "ipv6.address",
             "ipv6.autoconfig",
             "ipv6.dhcp",
+            "vrf",
         ]
 
     def execute_module(self):
