@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Copyright 2021 Red Hat
+# Copyright 2023 Red Hat
 # GNU General Public License v3.0+
 # (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
@@ -144,6 +144,10 @@ options:
               ipv6_sr:
                 description: Set ipv6_sr.
                 type: bool
+      vrf:
+        description:
+          - Name of the VRF attached to the interface
+        type: str
   running_config:
     description:
       - This option is used only with state I(parsed).
